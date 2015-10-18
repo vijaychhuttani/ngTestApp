@@ -58,6 +58,18 @@ readsupApp.controller('registerController', ['$scope', '$auth', function($scope,
         });
     };
     
+    $scope.handleGoogleRegistration = function() {
+         $auth.authenticate('google')
+         .then(function(resp) {
+          console.log("Google LOGIN SUCCESS");
+          console.log(resp);
+        })
+        .catch(function(resp) {
+          console.log("Google LOGIN FAILURE");
+          console.log(resp);
+        });
+    };
+    
 }]);
 
 readsupApp.controller('loginController', ['$scope', '$auth', function($scope, $auth) {

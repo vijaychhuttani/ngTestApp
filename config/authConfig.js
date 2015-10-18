@@ -4,7 +4,7 @@ readsupApp.config(function($authProvider) {
     // will extend the defaults using angular.extend
 
     $authProvider.configure({
-      apiUrl:                  'http://159.203.105.151:3000',
+      apiUrl:                  'http://192.168.2.7:3000',//'http://159.203.105.151:3000',
       tokenValidationPath:     '/auth/validate_token',
       signOutUrl:              '/auth/sign_out',
       emailRegistrationPath:   '/auth',
@@ -22,9 +22,9 @@ readsupApp.config(function($authProvider) {
       proxyUrl:                '/proxy',
       omniauthWindowType:      'sameWindow',
       authProviderPaths: {
-        github:   '/api/github',
+        github:   '/auth/github',
         facebook: '/auth/facebook',
-        google:   '/api/google'
+        google:   '/auth/google_oauth2'
       },
       tokenFormat: {
         "access-token": "{{ token }}",

@@ -10,3 +10,17 @@ input.button-fb {
     padding-left: 16px;     /* make text start to the right of the image */
     vertical-align: middle; /* align the text vertically centered */
 }
+
+input.button-gp {
+    background-image: url("https://www.rallynavigator.com/assets/google_oauth2-login-button-9da4ac95125e023504fe0d9db96c94f0.png"); /* 16px x 16px */
+    background-color: transparent; 
+    background-repeat: no-repeat;  /* make the background image appear only once */
+    background-position: 0px 0px;  /* equivalent to 'top left' */
+    border: none;           /* assuming we don't want any borders */
+    cursor: pointer;        /* make the cursor like hovering over an <a> element */
+    height: 108px;           /* make this the size of your image */
+    width: 492px;
+    padding-left: 16px;     /* make text start to the right of the image */
+    vertical-align: middle; /* align the text vertically centered */
+}
+
