@@ -22,9 +22,9 @@ readsupApp.config(function($authProvider) {
       proxyUrl:                '/proxy',
       omniauthWindowType:      'sameWindow',
       authProviderPaths: {
-        github:   '/auth/github',
+        github:   '/api/github',
         facebook: '/auth/facebook',
-        google:   '/auth/google'
+        google:   '/api/google'
       },
       tokenFormat: {
         "access-token": "{{ token }}",

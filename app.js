@@ -30,7 +30,7 @@ readsupApp.controller('mainController', ['$scope', '$auth', function($scope, $au
 readsupApp.controller('registerController', ['$scope', '$auth', function($scope, $auth) {
     
      $scope.registrationForm = {};
-     $scope.handleRegistration = function() {
+     $scope.handleEmailRegistration = function() {
          console.log($scope.registrationForm);
       $auth.submitRegistration($scope.registrationForm)
         .then(function(resp) {
@@ -41,6 +41,19 @@ readsupApp.controller('registerController', ['$scope', '$auth', function($scope,
         .catch(function(resp) {
           // handle error response
           console.log("REGISTRATION Failed");
+          console.log(resp);
+        });
+    };
+    
+    
+     $scope.handleFacebookRegistration = function() {
+         $auth.authenticate('facebook')
+         .then(function(resp) {
+          console.log("FB LOGIN SUCCESS");
+          console.log(resp);
+        })
+        .catch(function(resp) {
+          console.log("FB LOGIN FAILURE");
           console.log(resp);
         });
     };
