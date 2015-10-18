@@ -4,7 +4,7 @@ readsupApp.config(function($authProvider) {
     // will extend the defaults using angular.extend
 
     $authProvider.configure({
-      apiUrl:                  'http://192.168.2.7:3000',//'http://159.203.105.151:3000',
+      apiUrl:                  'http://159.203.105.151.xip.io:3000', //'http://192.168.2.7:3000',
       tokenValidationPath:     '/auth/validate_token',
       signOutUrl:              '/auth/sign_out',
       emailRegistrationPath:   '/auth',
